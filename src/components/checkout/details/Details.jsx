@@ -3,7 +3,10 @@ import "./Details.css"
 import DetailRow from './detailRow/DetailRow'
 import { products } from '../../../constants/appConstants'
 import ItemDetail from './itemDetail/ItemDetail'
+import Button from '../../button/Button'
+import { useNavigate } from 'react-router-dom'
 const Address = () => {
+
     return (
         <>
             <div
@@ -42,6 +45,7 @@ const Payment = () => {
     )
 }
 const Details = () => {
+    const navigate = useNavigate('')
     return (
         <div
             className='details-list'
@@ -63,11 +67,19 @@ const Details = () => {
             <div
                 style={{
                     border: '1px solid #333',
-                    
-                    
+                    display: 'flex',
+                    padding: '0.3rem',
+
                 }}
             >
-
+                <Button
+                    onClick={(e) => {
+                        e.preventDefault();
+                        navigate('/checked-out')
+                    }}
+                    title={'Place your order'}
+                    padding={'0.3rem 0.5rem'}
+                />
             </div>
         </div>
     )

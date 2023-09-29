@@ -1,8 +1,9 @@
 import React from 'react'
 import "./Button.css"
-const Button = ({ title, width, padding, borderRadius, backgroundColor, leftIcon, type, color }) => {
+const Button = ({ title, width, padding, borderRadius, backgroundColor, leftIcon, type, color, onClick }) => {
     return (
         <button
+            onClick={onClick}
             type={type || 'button'}
             className='custom-button'
             style={{

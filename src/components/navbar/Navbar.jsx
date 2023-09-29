@@ -3,9 +3,10 @@ import "./Navbar.css"
 import { BsFillFileEarmarkMusicFill } from 'react-icons/bs'
 import Button from '../button/Button'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 const Navbar = () => {
     const navigate = useNavigate()
+    const location = useLocation()
     const handleClick = () => {
         navigate('/cart')
     }
@@ -25,14 +26,16 @@ const Navbar = () => {
                 </p>
             </div>
             <div>
-                <Button
-                    title={'View Cart'}
-                    padding={'0.5rem 1.2rem'}
-                    backgroundColor={'#1D7000'}
-                    leftIcon={<AiOutlineShoppingCart />}
-                    borderRadius={'3rem'}
-                    onClick={handleClick}
-                />
+                {
+                    !location.pathname.includes('cart') &&
+                    <Button
+                        title={'View Cart'}
+                        padding={'0.5rem 1.2rem'}
+                        backgroundColor={'#1D7000'}
+                        leftIcon={<AiOutlineShoppingCart />}
+                        borderRadius={'3rem'}
+                        onClick={handleClick}
+                    />}
             </div>
         </div >
     )

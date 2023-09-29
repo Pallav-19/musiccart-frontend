@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductCarousel from '../../miscellaneous/carousel/ProductCarousel'
 import Button from '../../button/Button'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { products } from '../../../constants/appConstants'
 
 const ViewProduct = () => {
@@ -9,6 +9,7 @@ const ViewProduct = () => {
     const [loading, setLoading] = useState(true)
     const [product, setProduct] = useState({})
     console.log(products?.result?.find(x => x._id === id));
+    const navigate = useNavigate('')
     useEffect(() => {
         const fetch = async () => {
             try {
@@ -32,7 +33,11 @@ const ViewProduct = () => {
                     width: '100%',
                 }}
             >
-                <Button width={'8rem'} title={'Back to Products'} />
+                <Button width={'8rem'} title={'Back to Products'}
+                    onClick={() => {
+                        navigate('/')
+                    }}
+                />
             </div>
             <div
                 style={{

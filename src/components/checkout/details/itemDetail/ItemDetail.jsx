@@ -3,10 +3,10 @@ import './ItemDetail.css'
 const ItemDetail = () => {
     return (
         <div
-            className='item-detail'
+            className='item-detail-item-detail'
         >
             <div
-                className='image-box'
+                className='image-box-item-detail'
             >
 
             </div>

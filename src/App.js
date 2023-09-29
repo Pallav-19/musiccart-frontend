@@ -12,6 +12,7 @@ import Products from './components/products/Products'
 import ViewProduct from './components/products/viewProduct/ViewProduct'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
+import CheckedOut from './pages/CheckedOut'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             <Route exact path='/:id' element={<ViewProduct />} />
             <Route exact path='/cart' element={<Cart />} />
             <Route exact path='/checkout' element={<Checkout />} />
+            <Route exact path='/checked-out' element={<CheckedOut />} />
           </Route>
 
           <Route path='login' exact element={<Login />} />

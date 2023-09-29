@@ -1,7 +1,9 @@
 import React from 'react'
 import './Bill.css'
 import Button from '../../button/Button'
+import { useNavigate } from 'react-router-dom'
 const Bill = () => {
+    const navigate = useNavigate('')
     return (
         <div
             className='bill'
@@ -58,6 +60,10 @@ const Bill = () => {
                 backgroundColor={'#FFD600'}
                 padding={'0.5rem 0.8rem'}
                 color={'#000'}
+                onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/checkout')
+                }}
             />
         </div>
     )
