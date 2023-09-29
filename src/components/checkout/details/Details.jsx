@@ -66,20 +66,50 @@ const Details = () => {
             <hr />
             <div
                 style={{
-                    border: '1px solid #333',
+                    border: '1px solid rgba(3,3,3,0.34)',
                     display: 'flex',
-                    padding: '0.3rem',
-
+                    padding: '0.6rem',
+                    gap: '1rem',
+                    borderRadius: '0.8rem'
                 }}
             >
-                <Button
-                    onClick={(e) => {
-                        e.preventDefault();
-                        navigate('/checked-out')
+                <div
+                    style={{
+                        flex: 1
                     }}
-                    title={'Place your order'}
-                    padding={'0.3rem 0.5rem'}
-                />
+                >
+
+                    <Button
+
+                        color={'#000'}
+                        backgroundColor={"#FFD600"}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            navigate('/checked-out')
+                        }}
+                        title={'Place your order'}
+                        padding={'0.5rem 0.3rem'}
+                    />
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%'
+
+                    }}
+                >
+                    <b
+                        style={{
+                            color: '#B52B00'
+                        }}
+                    >
+                        Order Total: ₹3500
+                    </b>
+                    <small>
+                        By placing your order, you agree to Musicart privacy notice and conditions of use.
+                    </small>
+                </div>
             </div>
         </div>
     )
