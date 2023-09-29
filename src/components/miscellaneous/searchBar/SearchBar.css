@@ -6,3 +6,23 @@
   border: "2px solid #000";
   width: inherit;
 }
+.searchbar-mini{
+  display: none;
+}
+
+@media screen and (max-width:600px) {
+  .search{
+    position: absolute;
+    visibility:hidden;
+  }
+  .searchbar-mini{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 24px 16px;
+    background: #2E0052;
+  }
+  .searchbar-mini > input{
+    width: 90%;
+  }
+}
