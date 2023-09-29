@@ -1,7 +1,9 @@
 import React from 'react'
 import "./Invoice.css"
 import Button from '../../button/Button'
+import { useNavigate } from 'react-router-dom'
 const Invoice = () => {
+    const navigate = useNavigate('')
     return (
         <div
             className='invoice'
@@ -10,6 +12,10 @@ const Invoice = () => {
                 title={'Place your order'}
                 backgroundColor={"#FFD600"}
                 color={"#000"}
+                onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/checked-out')
+                }}
             />
             <small>
                 By placing your order, you agree to Musicart privacy notice and conditions of use.

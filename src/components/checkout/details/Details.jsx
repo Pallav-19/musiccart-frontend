@@ -3,7 +3,10 @@ import "./Details.css"
 import DetailRow from './detailRow/DetailRow'
 import { products } from '../../../constants/appConstants'
 import ItemDetail from './itemDetail/ItemDetail'
+import Button from '../../button/Button'
+import { useNavigate } from 'react-router-dom'
 const Address = () => {
+
     return (
         <>
             <div
@@ -42,6 +45,7 @@ const Payment = () => {
     )
 }
 const Details = () => {
+    const navigate = useNavigate('')
     return (
         <div
             className='details-list'
@@ -62,12 +66,50 @@ const Details = () => {
             <hr />
             <div
                 style={{
-                    border: '1px solid #333',
-                    
-                    
+                    border: '1px solid rgba(3,3,3,0.34)',
+                    display: 'flex',
+                    padding: '0.6rem',
+                    gap: '1rem',
+                    borderRadius: '0.8rem'
                 }}
             >
+                <div
+                    style={{
+                        flex: 1
+                    }}
+                >
 
+                    <Button
+
+                        color={'#000'}
+                        backgroundColor={"#FFD600"}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            navigate('/checked-out')
+                        }}
+                        title={'Place your order'}
+                        padding={'0.5rem 0.3rem'}
+                    />
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%'
+
+                    }}
+                >
+                    <b
+                        style={{
+                            color: '#B52B00'
+                        }}
+                    >
+                        Order Total: ₹3500
+                    </b>
+                    <small>
+                        By placing your order, you agree to Musicart privacy notice and conditions of use.
+                    </small>
+                </div>
             </div>
         </div>
     )
