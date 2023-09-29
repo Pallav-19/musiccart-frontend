@@ -13,6 +13,7 @@ import ViewProduct from './components/products/viewProduct/ViewProduct'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import CheckedOut from './pages/CheckedOut'
+import PageNotFound from './pages/PageNotFound'
 
 const App = () => {
   return (
@@ -25,17 +26,16 @@ const App = () => {
           <Route exact path='/' element={<Home />} >
             <Route index exact path='/' element={<Products />} />
             <Route exact path='/:id' element={<ViewProduct />} />
-            <Route exact path='/cart' element={<Cart />} />
-            <Route exact path='/checkout' element={<Checkout />} />
-            <Route exact path='/checked-out' element={<CheckedOut />} />
+            <Route element={<RequireAuth />}>
+              <Route exact path='/cart' element={<Cart />} />
+              <Route exact path='/checkout' element={<Checkout />} />
+              <Route exact path='/checked-out' element={<CheckedOut />} />
+            </Route>
           </Route>
 
-          <Route path='login' exact element={<Login />} />
+          <Route path='/login' exact element={<Login />} />
           <Route path='/register' exact element={<Register />} />
-
-          <Route element={<RequireAuth />}>
-
-          </Route>
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
         <Footer />
       </Router>
