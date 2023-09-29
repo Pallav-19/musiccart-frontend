@@ -11,6 +11,7 @@ import Header from './components/header/Header'
 import Products from './components/products/Products'
 import ViewProduct from './components/products/viewProduct/ViewProduct'
 import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 
 const App = () => {
   return (
@@ -19,14 +20,19 @@ const App = () => {
         <Header />
         <Suspense fallback={<Loader />} />
         <Routes>
+
           <Route exact path='/' element={<Home />} >
             <Route index exact path='/' element={<Products />} />
             <Route exact path='/:id' element={<ViewProduct />} />
             <Route exact path='/cart' element={<Cart />} />
+            <Route exact path='/checkout' element={<Checkout />} />
           </Route>
+
           <Route path='login' exact element={<Login />} />
           <Route path='/register' exact element={<Register />} />
+
           <Route element={<RequireAuth />}>
+
           </Route>
         </Routes>
         <Footer />

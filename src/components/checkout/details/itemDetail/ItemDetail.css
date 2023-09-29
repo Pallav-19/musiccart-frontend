@@ -1,0 +1,11 @@
+.image-box {
+  width: 50%;
+  height: 25vh;
+  border: 1px solid black;
+}
+.item-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
