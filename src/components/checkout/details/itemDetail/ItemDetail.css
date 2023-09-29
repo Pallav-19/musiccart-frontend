@@ -1,9 +1,9 @@
-.image-box {
+.image-box-item-detail {
   width: 50%;
   height: 25vh;
   border: 1px solid black;
 }
-.item-detail {
+.item-detail-item-detail {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
