@@ -29,3 +29,17 @@
   bottom: 0;
   right: 0;
 }
+
+@media screen and (max-width:600px) {
+  .banner-container{
+    height: 200px;
+    border-radius: 7px;
+  }
+  .text-box{
+    font-size: 24px;
+  }
+  .img-box > img{
+    height: 180px;
+    width: 220px;
+  }
+}

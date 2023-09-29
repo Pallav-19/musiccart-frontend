@@ -10,3 +10,9 @@
   margin: 0 !important;
   z-index: 900;
 }
+
+@media screen and (max-width:600px) {
+  .footer{
+    display: none;
+  }
+}
