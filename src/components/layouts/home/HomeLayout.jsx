@@ -1,6 +1,7 @@
 import React from 'react'
 import "./HomeLayout.css"
 import Navbar from '../../navbar/Navbar'
+import Appbar from '../../MenuBar/Appbar'
 const HomeLayout = ({ children }) => {
     return (
         <div
@@ -8,6 +9,7 @@ const HomeLayout = ({ children }) => {
         >
             <Navbar />
             {children}
+            {/* <Appbar/> */}
         </div>
     )
 }

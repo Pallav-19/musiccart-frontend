@@ -22,7 +22,7 @@ const MenuBar = () => {
                     style={{
                         fontSize: '1.5rem',
                         cursor: 'pointer',
-                        color: viewMode === 'list' && '#1D7000',
+                        color: viewMode === 'list'?'#333':'#CCC',
                     }}
                     onClick={() => {
                         dispatch(setViewMode('list'))
@@ -32,7 +32,7 @@ const MenuBar = () => {
                     style={{
                         fontSize: '1.5rem',
                         cursor: 'pointer',
-                        color: viewMode === 'grid' && '#1D7000'
+                        color: viewMode === 'grid'?'#333':'#CCC'
                     }}
                     onClick={() => {
                         dispatch(setViewMode('grid'))
