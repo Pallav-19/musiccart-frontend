@@ -5,3 +5,17 @@
   align-items: center;
   padding: 0 1rem;
 }
+
+@media screen and (max-width:600px) {
+  .MenuBar{
+    width: 550px;
+    overflow-x: scroll;
+  }
+  .MenuBar::-webkit-scrollbar{
+    display: none;
+  }
+  .view-options{
+    position: absolute;
+    visibility:hidden;
+  }
+}
