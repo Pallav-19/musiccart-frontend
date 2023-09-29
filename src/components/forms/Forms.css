@@ -1,0 +1,14 @@
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000;
+  font-size: 0.8rem;
+}
+
+input {
+  padding: 0.35rem;
+  /* margin-bottom: 16px; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 25vw;
+}

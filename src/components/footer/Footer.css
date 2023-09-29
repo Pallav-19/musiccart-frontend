@@ -1,0 +1,12 @@
+.footer {
+  background-color: #2f0052;
+  width: 100vw;
+  padding: 0.4rem;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+  margin: 0 !important;
+  z-index: 900;
+}

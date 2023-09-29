@@ -1,0 +1,18 @@
+.sort-dropdowns {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 1rem;
+}
+.sort {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 2rem;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  min-width: 12rem;
+}

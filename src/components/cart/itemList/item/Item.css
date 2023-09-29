@@ -1,0 +1,18 @@
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  padding-bottom: 2rem;
+}
+.image-box {
+  width: 25%;
+  height: 25vh;
+  border: 1px solid black;
+}
+.item-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.3rem;
+}

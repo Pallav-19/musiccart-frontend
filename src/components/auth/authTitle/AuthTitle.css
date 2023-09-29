@@ -1,0 +1,10 @@
+.auth-title {
+  font-size: 1.25rem;
+  margin: 0;
+  margin-bottom: 0.8rem;
+}
+@media (max-width: "768px") {
+  .auth-title {
+    display: none;
+  }
+}

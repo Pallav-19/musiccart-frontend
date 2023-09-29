@@ -1,0 +1,21 @@
+.filter-dropdowns {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 1rem;
+}
+.filter-dropdowns > select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 2rem;
+  background-color: #ccc;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 7rem;
+}
+.filter-dropdowns > select > option {
+  background-color: white !important;
+}

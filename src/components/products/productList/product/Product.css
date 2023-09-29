@@ -1,0 +1,33 @@
+.contanier {
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.4rem;
+  padding: 0.3rem;
+  gap: 0.5rem;
+}
+
+.image-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #d4e5ff;
+  height: 10rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  position: relative;
+  padding: 0.3rem;
+}
+.info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.para {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.contanier:hover {
+  cursor: pointer;
+}
