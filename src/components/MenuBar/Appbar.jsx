@@ -9,7 +9,7 @@ export default function Appbar() {
   return (
     <div className="appbar">
       <div
-        className="box"
+        className="appbox"
         style={{
           borderTop: active == 1 ? "4px solid black" : "0",
         }}
@@ -24,7 +24,7 @@ export default function Appbar() {
         <p>Home</p>
       </div>
       <div
-        className="box"
+        className="appbox"
         style={{
           borderTop: active == 2 ? "4px solid black" : "0",
         }}
@@ -39,7 +39,7 @@ export default function Appbar() {
         <p>Cart</p>
       </div>
       <div
-        className="box"
+        className="appbox"
         style={{
           borderTop: active == 3 ? "4px solid black" : "0",
         }}

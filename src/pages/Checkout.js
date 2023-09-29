@@ -24,7 +24,7 @@ const Checkout = () => {
             </h2>
             <CartContainer>
                 <Details />
-                <Invoice />
+                {/* <Invoice /> */}
             </CartContainer>
         </>
     )

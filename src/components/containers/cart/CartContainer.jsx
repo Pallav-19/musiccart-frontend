@@ -2,9 +2,10 @@ import React from 'react'
 import "./CartContainer.css"
 const CartContainer = ({ children }) => {
     return (
-        <div
+       <div
             className='container'
-        >{children}</div>
+        >
+            {children}</div>
     )
 }
 

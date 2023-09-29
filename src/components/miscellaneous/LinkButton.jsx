@@ -7,7 +7,7 @@ const LinkButton = ({ title, to, needBorder }) => {
             <p
                 style={{
                     fontSize: "0.85rem",
-                    width: '30vw',
+                    width: '50vw',
                     padding: '0.6rem',
                     textAlign: 'center',
                     textDecoration: needBorder ? 'none' : 'underline',

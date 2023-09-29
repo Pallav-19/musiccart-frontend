@@ -7,3 +7,9 @@
   padding: 1.5rem;
   justify-content: space-evenly;
 }
+
+@media screen and (max-width:600px) {
+  .auth-layout{
+    width: 50vw;
+  }
+}

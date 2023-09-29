@@ -1,6 +1,7 @@
 import React from 'react'
 import "./HomeLayout.css"
 import Navbar from '../../navbar/Navbar'
+import Footer from '../../footer/FooterComponent'
 import Appbar from '../../MenuBar/Appbar'
 const HomeLayout = ({ children }) => {
     return (
@@ -9,7 +10,8 @@ const HomeLayout = ({ children }) => {
         >
             <Navbar />
             {children}
-            {/* <Appbar/> */}
+            <Footer/>
+            <Appbar/>
         </div>
     )
 }

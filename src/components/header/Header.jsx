@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import { BsFillTelephoneFill } from "react-icons/bs"
+import SearchBarMini from '../miscellaneous/searchBar/Search'
 const DeskTopHeader = () => {
     return (
         <div>
@@ -11,6 +12,8 @@ const DeskTopHeader = () => {
 }
 const Header = () => {
     return (
+        <>
+        <SearchBarMini/>
         <header className='header'>
             <span>
                 <BsFillTelephoneFill
@@ -18,6 +21,8 @@ const Header = () => {
             <span>Get 50% off on selected items | Shop Now</span>
             <span>Logout</span>
         </header>
+        </>
+        
     )
 }
 
