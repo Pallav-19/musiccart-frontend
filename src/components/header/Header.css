@@ -13,7 +13,7 @@
   z-index: 900;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:900px) {
   .header{
     display: none;
   }

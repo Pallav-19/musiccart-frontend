@@ -31,3 +31,9 @@
 .contanier:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width:465px) {
+  .contanier{
+    width: 60vw;
+  }
+}

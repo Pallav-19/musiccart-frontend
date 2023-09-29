@@ -10,7 +10,7 @@
   display: none;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:900px) {
   .search{
     position: absolute;
     visibility:hidden;
