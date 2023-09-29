@@ -8,7 +8,7 @@ import SearchBarMini from '../miscellaneous/searchBar/Search'
 const Products = () => {
     return (
         <>
-            <SearchBarMini/>
+            <SearchBarMini />
             <Banner />
             <SearchBar />
             <MenuBar />
