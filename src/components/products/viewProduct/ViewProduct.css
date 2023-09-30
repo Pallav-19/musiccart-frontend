@@ -1,0 +1,42 @@
+.sliderbox{
+ display: flex;
+ gap: 3rem;
+ width: 100%;
+ flex-direction: row;
+ align-items: center;
+}
+.info-box{
+    width: 50%;
+}
+.headp{
+    font-size: 22px;
+}
+.titlep{
+    font-size: 22px;
+}
+.carousel-box{
+  width: 50%;
+}
+
+@media screen and (max-width:600px) {
+.headp{
+    font-size: 20px;
+}
+.titlep{
+    font-size: 20px;
+}
+}
+
+@media screen and (max-width:850px) {
+    .sliderbox{
+    flex-direction: column;
+    width: 80vw;
+    justify-content: center;
+    }
+    .info-box{
+        width: 100%;
+    }
+    .carousel-box{
+        width: 100%;
+  }  
+}

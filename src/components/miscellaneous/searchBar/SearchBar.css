@@ -8,9 +8,10 @@
 }
 .searchbar-mini{
   display: none;
+  margin-bottom: 16px ;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:760px) {
   .search{
     position: absolute;
     visibility:hidden;

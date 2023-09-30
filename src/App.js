@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { } from 'react'
 import "./App.css"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Loader from './components/miscellaneous/loader/Loader'
@@ -14,22 +14,29 @@ import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import CheckedOut from './pages/CheckedOut'
 import PageNotFound from './pages/PageNotFound'
-
+import { useSelector } from 'react-redux'
+import { currentLoading } from './features/utils/loadingSlice'
+import Notifications from './components/miscellaneous/Notifications'
+import PersistentUserLogin from './components/auth/PersistentUserLogin'
 const App = () => {
+  const isLoading = useSelector(currentLoading)
   return (
     <div className='App'>
       <Router>
         <Header />
-        <Suspense fallback={<Loader />} />
+        {isLoading && <Loader />}
+        <Notifications />
         <Routes>
 
           <Route exact path='/' element={<Home />} >
             <Route index exact path='/' element={<Products />} />
             <Route exact path='/:id' element={<ViewProduct />} />
-            <Route element={<RequireAuth />}>
-              <Route exact path='/cart' element={<Cart />} />
-              <Route exact path='/checkout' element={<Checkout />} />
-              <Route exact path='/checked-out' element={<CheckedOut />} />
+            <Route element={<PersistentUserLogin />}>
+              <Route element={<RequireAuth />}>
+                <Route exact path='/cart' element={<Cart />} />
+                <Route exact path='/checkout' element={<Checkout />} />
+                <Route exact path='/checked-out' element={<CheckedOut />} />
+              </Route>
             </Route>
           </Route>
 

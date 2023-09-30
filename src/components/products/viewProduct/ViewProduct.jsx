@@ -3,6 +3,8 @@ import ProductCarousel from '../../miscellaneous/carousel/ProductCarousel'
 import Button from '../../button/Button'
 import { useNavigate, useParams } from 'react-router-dom'
 import { products } from '../../../constants/appConstants'
+import SearchBarMini from '../../miscellaneous/searchBar/Search'
+import './ViewProduct.css'
 
 const ViewProduct = () => {
     const { id } = useParams()
@@ -43,26 +45,18 @@ const ViewProduct = () => {
                 style={{
                     width: '100%',
                     fontWeight: 500,
-                    fontSize: '1.3rem',
                     wordWrap: 'break-word'
-
                 }}
+                className='titlep'
             >
                 <p>
                     {product?.longDescription}
                 </p>
             </div>
             <div
-                style={{
-                    width: '100%',
-                    display: 'flex',
-                    gap: '3rem'
-                }}
+            className='sliderbox'
             >
                 <div
-                    style={{
-                        width: '50%'
-                    }}
                     className='carousel-box'>
                     <ProductCarousel
                         data={product?.images.map(x => ({ image: x }))}
@@ -74,15 +68,14 @@ const ViewProduct = () => {
                         flexDirection: 'column',
                         gap: '1rem',
                         wordBreak: 'break-word',
-                        width: '50%'
                     }}
                     className='info-box'>
                     <p
                         style={{
-                            fontSize: "1.7rem",
                             fontWeight: 500,
                             marginBottom: '1rem'
                         }}
+                        className='headp'
                     >
                         {product?.name}
                     </p>

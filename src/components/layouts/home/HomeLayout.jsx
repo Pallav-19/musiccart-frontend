@@ -9,7 +9,7 @@ const HomeLayout = ({ children }) => {
         >
             <Navbar />
             {children}
-            {/* <Appbar/> */}
+            <Appbar />
         </div>
     )
 }

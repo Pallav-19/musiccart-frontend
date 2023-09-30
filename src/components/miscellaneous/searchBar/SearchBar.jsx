@@ -9,7 +9,7 @@ const SearchBar = () => {
                 style={{
                     padding: '0.8rem'
                 }}
-                placeholder={'🔍  Search For Products'}
+                placeholder={'🔍 Search For Products'}
 
             />
         </div>

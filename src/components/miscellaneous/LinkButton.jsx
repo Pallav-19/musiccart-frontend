@@ -3,23 +3,22 @@ import { Link } from 'react-router-dom'
 
 const LinkButton = ({ title, to, needBorder }) => {
     return (
-        <Link to={to} style={{ textDecoration: 'none' }}>
+        <Link to={to} style={{
+            fontSize: "0.85rem",
+            minWidth: '100%',
+            padding: '0.6rem',
+            textAlign: 'center',
+            textDecoration: needBorder ? 'none' : 'underline',
+            border: needBorder && '1px solid #333',
+            color: '#333',
+            borderRadius: '0.5rem',
+        }}>
             <p
-                style={{
-                    fontSize: "0.85rem",
-                    width: '30vw',
-                    padding: '0.6rem',
-                    textAlign: 'center',
-                    textDecoration: needBorder ? 'none' : 'underline',
-                    border: needBorder && '1px solid #333',
-                    color: '#333',
-                    borderRadius: '0.5rem',
 
-                }}
             >
                 {title}
             </p>
-        </Link>
+        </Link >
     )
 }
 

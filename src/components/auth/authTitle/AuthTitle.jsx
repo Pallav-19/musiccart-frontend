@@ -2,11 +2,20 @@ import React from 'react'
 import "./AuthTitle.css"
 const AuthTitle = ({ title }) => {
     return (
-        <p
-            className='auth-title'
-        >{
-                title
-            }</p>
+        <>
+            <b
+                className='little-auth-title'
+            >
+                {title === 'Sign up' ? "Sign Up" : "Sign In"}
+            </b>
+            <p
+                className='auth-title'
+            >{
+                    title
+                }
+
+            </p>
+        </>
     )
 }
 

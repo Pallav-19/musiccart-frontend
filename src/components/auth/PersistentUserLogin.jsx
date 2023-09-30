@@ -4,7 +4,7 @@
 import { Outlet } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect, useState } from "react"
-import { useRefreshMutation } from "../../app/api/auth/authApiSlice"
+import { useRefreshMutation } from "../../api/auth/authApiSlice"
 import { currentToken, setCredentials } from "../../features/auth/authSlice"
 import Loader from "../miscellaneous/loader/Loader"
 const PersistentUserLogin = () => {

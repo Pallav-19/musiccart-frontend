@@ -3,8 +3,16 @@
   margin: 0;
   margin-bottom: 0.8rem;
 }
-@media (max-width: "768px") {
+.little-auth-title {
+  display: none;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
   .auth-title {
     display: none;
+  }
+  .little-auth-title {
+    display: flex;
+    margin-bottom: 0.5rem;
   }
 }

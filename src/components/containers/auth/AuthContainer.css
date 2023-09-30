@@ -5,7 +5,5 @@
   border: 2px solid rgba(0, 0, 0, 0.178);
   border-radius: 0.6rem;
   box-sizing: border-box;
-  width: 30vw;
-}
-@media (max-width: "768px") {
+  width: 100%;
 }

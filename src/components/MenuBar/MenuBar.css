@@ -6,39 +6,12 @@
   padding: 0 1rem;
 }
 
-@media screen and (max-width:900px) {
-  .MenuBar{
-    width: 750px;
-    overflow-x: scroll;
-    padding: 0;
-  }
-  .MenuBar::-webkit-scrollbar{
-    display: none;
-  }
-  .view-options{
-    position: absolute;
-    visibility:hidden;
-  }
-}
-
-@media screen and (max-width:750px){
-  .MenuBar{
-    width: 630px;
-  }
-}
-
-@media screen and (max-width:600px) {
-  .MenuBar{
-    width: 95vw;
-  }
-}
-
-.appbar{
+.appbar {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: space-between;
 }
-.box{
+.appbox {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,6 +20,42 @@
   position: sticky;
   bottom: 0;
 }
-.box > p{
+.appbox > p {
   font-size: 12px;
+}
+
+@media screen and (max-width: 900px) {
+  .appbar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    padding: 0.3rem 0.5rem;
+  }
+  .MenuBar {
+    width: 750px;
+    overflow-x: scroll;
+    padding: 0;
+  }
+  .MenuBar::-webkit-scrollbar {
+    display: none;
+  }
+  .view-options {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .MenuBar {
+    width: 630px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .MenuBar {
+    width: 95vw;
+  }
 }
